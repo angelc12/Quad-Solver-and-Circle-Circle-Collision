@@ -1,0 +1,110 @@
+#include <iostream>
+#include <cmath>
+#include <math.h>
+using namespace std;
+
+int v;
+double a,b,c,answer,a1,a2,a3,xx,yy,x,y,r,rr,d,s;
+int main()
+{
+	//Choose which one to use
+Start:
+	{
+cout<<"1. Quadratic formula.\n";
+cout<<"2. Circle-Circle collision.\n";
+cin >> v;
+
+if (v == 1)
+{
+	system("cls");
+	goto Start1;
+}
+else if(v == 2)
+{
+	system("cls");
+	goto Start2;
+}
+	}
+	//Enter values for quadratic formula
+Start1:
+	cout<<"Enter the A value of the equation.\n";
+		cin>>a;
+	cout<<"Enter the B value of the equation.\n";
+		cin>>b;
+	cout<<"Enter the C value of the equation.\n";
+		cin>>c;
+		cout<<"\n\n";
+	
+
+	(b*b)-(4*a*c);
+	
+	//determining the answers, and the ammount of answers
+	if((b*b)-(4*a*c) >= 1)
+	{
+		a1 = ((-b)+sqrt((b*b)-(4*a*c)))/(2*a);
+		a2 = ((-b)-sqrt((b*b)-(4*a*c)))/(2*a);
+
+		cout<<"The answers are "<<a1<<", and "<<a2<<".\n";
+		system("pause");
+	system("cls");
+	goto Start;
+	}
+
+	else if((b*b)-(4*a*c) == 0)
+	{
+		a3 = ((-b)/(2*a));
+		cout<<"The answer is "<< a3<<".\n";
+		system("pause");
+	system("cls");
+	goto Start;
+	}
+
+	else
+	{
+		cout<<"No real answers\n";
+		system("pause");
+	system("cls");
+		goto Start;
+	}
+
+
+
+{
+	//Enter values for circle-circle collision
+Start2:
+
+	cout<<"Enter the x coordinate of the center in the first equation.\n";
+		cin>>x;
+	cout<<"Enter the y coordinate of the center in the first equation.\n";
+		cin>>y;
+	cout<<"Enter the radius of the first equation.\n";
+		cin>>r;
+	cout<<"Enter the x-coordinate of the center in the second equation.\n";
+		cin>>xx;
+	cout<<"Enter the y-coordinate of the center in the second equation.\n";
+		cin>>yy;
+	cout<<"Enter the radius of the second equation.\n";
+		cin>>rr;
+		
+s = (r+rr);
+d = sqrt((x-xx)*(x-xx) + (y-yy)*(y-yy));
+
+//determining collision between the circles
+if(d <= s)
+{
+	cout<<"There is collision.\n";
+	system("pause");
+	system("cls");
+	goto Start;
+}
+else
+{
+	cout<<"No collision.\n";
+	system("pause");
+	system("cls");
+	goto Start;
+}
+
+}
+}
+		
